@@ -209,6 +209,36 @@
     box-shadow: 0 24px 64px rgba(181, 38, 30, 0.14);
   }
 
+
+  .da-wrap { display:grid; grid-template-columns: minmax(0,0.85fr) minmax(0,1fr); gap:64px; align-items:center; max-width:1100px; width:100%; }
+  .da-poster img { width:100%; height:auto; display:block; border-radius:12px; box-shadow:0 16px 48px rgba(181,38,30,0.12); transition:transform .3s, box-shadow .3s; }
+  .da-poster:hover img { transform:translateY(-6px); box-shadow:0 24px 64px rgba(181,38,30,0.18); }
+  .da-tag { display:inline-block; background:var(--red); color:#fff; font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:16px; }
+  .da-text h2 { font-family:"Playfair Display",serif; font-size:clamp(30px,3.6vw,46px); font-weight:900; line-height:1.12; letter-spacing:-0.01em; margin-bottom:14px; }
+  .da-text h2 em { font-style:italic; color:var(--red); }
+  .da-text > p { font-size:15.5px; color:rgba(0,0,0,0.65); line-height:1.7; margin-bottom:24px; }
+  .da-need { background:#fff; border:1px solid rgba(0,0,0,0.08); border-left:4px solid var(--yellow); border-radius:4px; padding:18px 22px; margin-bottom:20px; }
+  .da-label { font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
+  .da-need ul { list-style:none; margin:0; padding:0; }
+  .da-need li { font-size:14.5px; color:#444; line-height:1.6; padding-left:22px; position:relative; margin-bottom:6px; }
+  .da-need li::before { content:'🐾'; position:absolute; left:0; font-size:12px; top:2px; }
+  .da-ways { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:28px; }
+  .da-ways div { background:var(--grey, #F2F0ED); border-radius:4px; padding:14px; font-size:13px; color:#555; line-height:1.5; }
+  .da-ways span { display:block; font-size:22px; margin-bottom:6px; }
+  .da-ways strong { display:block; color:var(--black); font-size:14px; margin-bottom:2px; }
+  .da-ctas { display:flex; flex-wrap:wrap; gap:12px; }
+  .da-btn { display:inline-block; padding:14px 28px; border-radius:100px; font-size:12.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:transform .2s, box-shadow .2s; }
+  .da-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,0.12); }
+  .da-btn-y { background:var(--yellow); color:var(--black); }
+  .da-btn-r { background:var(--red); color:#fff; }
+  @media (max-width: 900px) {
+    .da-wrap { grid-template-columns:1fr; gap:32px; }
+    .da-poster { max-width:420px; margin:0 auto; display:block; }
+    .da-ways { grid-template-columns:1fr; gap:8px; }
+    .da-ways div { display:grid; grid-template-columns:32px 1fr; column-gap:10px; padding:12px 14px; }
+    .da-ways span { grid-row:span 2; margin:0; }
+    .da-ctas .da-btn { flex:1 1 100%; text-align:center; }
+  }
   @media (max-width: 768px) {
     nav { padding: 12px 20px; }
     .nav-links { display: none; }
@@ -272,12 +302,31 @@
 
 <!-- Donations Appeal Section -->
 <section class="donations-appeal">
-  <div class="donations-appeal-intro">
-    <h2>Our <em>Shelter Needs Your Help</em></h2>
-    <p>Right now, our shelter is operating at full capacity with dogs coming in faster than we can provide food and medical care. Every donation directly supports feeding, treating, and finding homes for animals in need.</p>
-  </div>
-  <div class="donations-appeal-container">
-    <img src="donations-needed.jpg" alt="STARS emergency donations needed - help us feed and care for rescued animals">
+  <div class="da-wrap">
+    <a class="da-poster" href="donations-needed.jpg" target="_blank" aria-label="Open the Donations Needed flyer">
+      <img src="donations-needed.jpg" alt="STARS Donations Needed flyer: Kirkland limited ingredient dog food requested">
+    </a>
+    <div class="da-text">
+      <div class="da-tag">Urgent · Food Drive</div>
+      <h2>Our <em>Shelter Needs Your Help</em></h2>
+      <p>Right now, our shelter is operating at full capacity with dogs coming in faster than we can provide food and medical care. Every donation directly supports feeding, treating, and finding homes for animals in need.</p>
+      <div class="da-need">
+        <div class="da-label">What we need most</div>
+        <ul>
+          <li><strong>Kirkland limited ingredient</strong> kibble or canned dog food</li>
+          <li><strong>Grain-free</strong> preferred — many dogs arrive with stress-related allergies and upset stomachs, and it's easier on their systems</li>
+        </ul>
+      </div>
+      <div class="da-ways">
+        <div><span>📦</span><strong>Drop off</strong>Donation bins in front of the shelter, 225 Beacon Point Rd</div>
+        <div><span>🚚</span><strong>Ship</strong>Order from the Costco website to the shelter</div>
+        <div><span>🛒</span><strong>Deliver</strong>Send through Instacart</div>
+      </div>
+      <div class="da-ctas">
+        <a href="https://www.amazon.com/hz/wishlist/ls/2WOYRDUTP6QPS?ref_=wl_share" target="_blank" class="da-btn da-btn-y">Shop Our Wishlist</a>
+        <a href="https://givebutter.com/donate-stars" target="_blank" class="da-btn da-btn-r">Give Money for Food</a>
+      </div>
+    </div>
   </div>
 </section>
 
