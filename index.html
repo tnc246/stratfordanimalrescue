@@ -210,49 +210,25 @@
   }
 
 
-  .da-wrap { display:grid; grid-template-columns: minmax(0,0.85fr) minmax(0,1fr); gap:64px; align-items:center; max-width:1100px; width:100%; }
-  .da-poster img { width:100%; height:auto; display:block; border-radius:12px; box-shadow:0 16px 48px rgba(181,38,30,0.12); transition:transform .3s, box-shadow .3s; }
-  .da-poster:hover img { transform:translateY(-6px); box-shadow:0 24px 64px rgba(181,38,30,0.18); }
-  .da-tag { display:inline-block; background:var(--red); color:#fff; font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:16px; }
-  .da-text h2 { font-family:"Playfair Display",serif; font-size:clamp(30px,3.6vw,46px); font-weight:900; line-height:1.12; letter-spacing:-0.01em; margin-bottom:14px; }
-  .da-text h2 em { font-style:italic; color:var(--red); }
-  .da-text > p { font-size:15.5px; color:rgba(0,0,0,0.65); line-height:1.7; margin-bottom:24px; }
-  .da-need { background:#fff; border:1px solid rgba(0,0,0,0.08); border-left:4px solid var(--yellow); border-radius:4px; padding:18px 22px; margin-bottom:20px; }
-  .da-label { font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
-  .da-need ul { list-style:none; margin:0; padding:0; }
-  .da-need li { font-size:14.5px; color:#444; line-height:1.6; padding-left:22px; position:relative; margin-bottom:6px; }
-  .da-need li::before { content:'🐾'; position:absolute; left:0; font-size:12px; top:2px; }
-  .da-ways { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:28px; }
-  .da-ways div { background:var(--grey, #F2F0ED); border-radius:4px; padding:14px; font-size:13px; color:#555; line-height:1.5; }
-  .da-ways span { display:block; font-size:22px; margin-bottom:6px; }
-  .da-ways strong { display:block; color:var(--black); font-size:14px; margin-bottom:2px; }
-  .da-ctas { display:flex; flex-wrap:wrap; gap:12px; }
-  .da-btn { display:inline-block; padding:14px 28px; border-radius:100px; font-size:12.5px; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; text-decoration:none; transition:transform .2s, box-shadow .2s; }
-  .da-btn:hover { transform:translateY(-2px); box-shadow:0 8px 20px rgba(0,0,0,0.12); }
-  .da-btn-y { background:var(--yellow); color:var(--black); }
-  .da-btn-r { background:var(--red); color:#fff; }
+  .food-strip { background: var(--white); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 44px 80px; }
+  .fs-inner { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 48px; }
+  .fs-text { flex: 1; border-left: 3px solid var(--red); padding-left: 28px; }
+  .fs-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 10px; }
+  .fs-text h2 { font-family: "Playfair Display", serif; font-size: clamp(24px, 2.6vw, 32px); font-weight: 900; line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 10px; }
+  .fs-text h2 em { font-style: italic; color: var(--red); }
+  .fs-text p { font-size: 15px; color: rgba(0,0,0,0.65); line-height: 1.7; max-width: 720px; }
+  .fs-text p strong { color: var(--black); }
+  .fs-text p a { color: var(--red); font-weight: 600; white-space: nowrap; }
+  .fs-ctas { display: flex; flex-direction: column; gap: 10px; flex: none; }
+  .fs-btn { display: block; text-align: center; padding: 14px 30px; border-radius: 100px; font-size: 12.5px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: transform .2s, box-shadow .2s; }
+  .fs-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.1); }
+  .fs-btn-y { background: var(--yellow); color: var(--black); }
+  .fs-btn-o { border: 1.5px solid var(--black); color: var(--black); }
   @media (max-width: 900px) {
-    .da-wrap { grid-template-columns:1fr; gap:32px; }
-    .da-poster { max-width:420px; margin:0 auto; display:block; }
-    .da-ways { grid-template-columns:1fr; gap:8px; }
-    .da-ways div { display:grid; grid-template-columns:32px 1fr; column-gap:10px; padding:12px 14px; }
-    .da-ways span { grid-row:span 2; margin:0; }
-    .da-ctas .da-btn { flex:1 1 100%; text-align:center; }
+    .food-strip { padding: 36px 24px; }
+    .fs-inner { flex-direction: column; align-items: stretch; gap: 24px; }
+    .fs-text { padding-left: 18px; }
   }
-
-  .da-card { background:var(--red); color:#fff; border-radius:16px; padding:44px 40px; position:relative; overflow:hidden; box-shadow:0 20px 50px rgba(181,38,30,0.18); }
-  .da-card::after { content:'🐾'; position:absolute; right:-10px; bottom:-24px; font-size:150px; opacity:0.08; transform:rotate(-18deg); }
-  .da-card-tag { display:inline-block; background:var(--yellow); color:var(--black); font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:6px 14px; border-radius:100px; margin-bottom:18px; }
-  .da-card h3 { font-family:"Playfair Display",serif; font-weight:900; font-size:clamp(30px,3.4vw,42px); line-height:1.08; margin-bottom:12px; }
-  .da-card h3 em { color:var(--yellow); font-style:italic; }
-  .da-card > p { font-size:15px; color:rgba(255,255,255,0.82); line-height:1.6; margin-bottom:26px; }
-  .da-card-ways { display:flex; flex-direction:column; gap:10px; margin-bottom:22px; position:relative; z-index:1; }
-  .da-card-ways > div { display:flex; gap:14px; align-items:flex-start; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.14); border-radius:10px; padding:14px 16px; font-size:13.5px; color:rgba(255,255,255,0.85); line-height:1.5; }
-  .da-card-ways strong { display:block; color:#fff; font-size:15px; margin-bottom:2px; }
-  .da-ico { width:36px; height:36px; flex:none; border-radius:50%; background:var(--yellow); display:flex; align-items:center; justify-content:center; font-size:17px; }
-  .da-card-link { position:relative; z-index:1; color:var(--yellow); font-size:13px; font-weight:700; letter-spacing:0.04em; text-decoration:none; }
-  .da-card-link:hover { text-decoration:underline; }
-  @media (max-width: 900px) { .da-card { padding:32px 24px; } }
   @media (max-width: 768px) {
     nav { padding: 12px 20px; }
     .nav-links { display: none; }
@@ -314,36 +290,58 @@
   <div class="hero-scroll">Scroll to explore</div>
 </section>
 
-<!-- Donations Appeal Section -->
-<section class="donations-appeal">
-  <div class="da-wrap">
-    <div class="da-card">
-      <div class="da-card-tag">Food Drive</div>
-      <h3>Help Us Keep<br><em>Every Bowl Full</em></h3>
-      <p>Our shelter is very full, and we're going through food quickly.</p>
-      <div class="da-card-ways">
-        <div><span class="da-ico">📦</span><div><strong>Drop off</strong>Donation bins in front of the shelter, 225 Beacon Point Rd</div></div>
-        <div><span class="da-ico">🚚</span><div><strong>Ship</strong>Order from the Costco website to the shelter</div></div>
-        <div><span class="da-ico">🛒</span><div><strong>Deliver</strong>Send through Instacart</div></div>
-      </div>
-      <a href="donations-needed.jpg" target="_blank" class="da-card-link">View the printable flyer →</a>
+<!-- Food Drive Strip -->
+<section class="food-strip">
+  <div class="fs-inner">
+    <div class="fs-text">
+      <div class="fs-tag">Urgent Need · Food Drive</div>
+      <h2>Our shelter is full — help us keep <em>every bowl full.</em></h2>
+      <p>We're going through food quickly. Please donate <strong>Kirkland limited-ingredient</strong> kibble or canned dog food (grain-free preferred — it's easier on dogs who arrive stressed). Drop it in the bins in front of the shelter at 225 Beacon Point Rd, ship it from Costco, or send it through Instacart. <a href="donations-needed.jpg" target="_blank">View flyer</a></p>
     </div>
-    <div class="da-text">
-      <div class="da-tag">Urgent Need</div>
-      <h2>Our <em>Shelter Needs Your Help</em></h2>
-      <p>Right now, our shelter is operating at full capacity with dogs coming in faster than we can provide food and medical care. Every donation directly supports feeding, treating, and finding homes for animals in need.</p>
-      <div class="da-need">
-        <div class="da-label">What we need most</div>
-        <ul>
-          <li><strong>Kirkland limited ingredient</strong> kibble or canned dog food</li>
-          <li><strong>Grain-free</strong> preferred — many dogs arrive with stress-related allergies and upset stomachs, and it's easier on their systems</li>
-        </ul>
-      </div>
-      <div class="da-ctas">
-        <a href="https://www.amazon.com/hz/wishlist/ls/2WOYRDUTP6QPS?ref_=wl_share" target="_blank" class="da-btn da-btn-y">Shop Our Wishlist</a>
-        <a href="https://givebutter.com/donate-stars" target="_blank" class="da-btn da-btn-r">Give Money for Food</a>
-      </div>
+    <div class="fs-ctas">
+      <a href="https://www.amazon.com/hz/wishlist/ls/2WOYRDUTP6QPS?ref_=wl_share" target="_blank" class="fs-btn fs-btn-y">Shop Our Wishlist</a>
+      <a href="https://givebutter.com/donate-stars" target="_blank" class="fs-btn fs-btn-o">Give Money for Food</a>
     </div>
+  </div>
+</section>
+
+<section class="events" id="events">
+  <div class="sec-hdr">
+    <div>
+      <div class="section-tag">What's Happening</div>
+      <h2>Upcoming Events</h2>
+    </div>
+    <a href="/events.html" class="sec-link">View All →</a>
+  </div>
+  <div class="events-grid">
+    <a href="https://givebutter.com/thestratford10" class="ecard" target="_blank">
+      <img src="stratford-10.jpg" alt="Four of the Stratford 10 dogs: Big Papa, Baby Boo, Sassy and Boss Man">
+      <div class="ecard-body">
+        <div class="ecard-date">Urgent Need</div>
+        <h3>Help Heal the Stratford 10</h3>
+        <p>Eight puppies and two parents rescued in a cruelty case need emergency vet care, vaccines and spay/neuter surgeries.</p>
+        <span class="ecard-tag">Donate Now</span>
+      </div>
+    </a>
+    <a href="holiday-evergreen.jpg" class="ecard" target="_blank">
+      <img src="holiday-evergreen.jpg" alt="STARS Holiday Evergreen Sale &amp; Boutique flyer, November 27–29" style="object-position:top;">
+      <div class="ecard-body">
+        <div class="ecard-date">Nov 27–29, 2026</div>
+        <h3>Holiday Evergreen Sale &amp; Boutique</h3>
+        <p>Wreaths, cemetery pieces, kissing balls, pine roping &amp; more at Stratford Animal Care &amp; Control, 225 Beacon Point Rd.</p>
+        <span class="ecard-tag">View Flyer</span>
+      </div>
+    </a>
+    <a href="/events.html" class="ecard">
+      <img src="photos-with-santa-card.jpg" alt="Santa holding a smiling dog and a cat – Photos with Santa, Sunday November 29, 2026">
+      <div class="ecard-body">
+        <div class="ecard-date">Sun, Nov 29, 2026</div>
+        <h3>Photos with Santa</h3>
+        <p>Pet photos with Santa, 10 AM–12 PM &amp; 2–4 PM, for a $20 donation. Take photos on your own phone — all proceeds benefit shelter animals.</p>
+        <span class="ecard-tag">See Details</span>
+      </div>
+    </a>
+
   </div>
 </section>
 
@@ -392,45 +390,7 @@
   </div>
 </section>
 
-<section class="events" id="events">
-  <div class="sec-hdr">
-    <div>
-      <div class="section-tag">What's Happening</div>
-      <h2>Upcoming Events</h2>
-    </div>
-    <a href="/events.html" class="sec-link">View All →</a>
-  </div>
-  <div class="events-grid">
-    <a href="https://givebutter.com/thestratford10" class="ecard" target="_blank">
-      <img src="stratford-10.jpg" alt="Four of the Stratford 10 dogs: Big Papa, Baby Boo, Sassy and Boss Man">
-      <div class="ecard-body">
-        <div class="ecard-date">Urgent Need</div>
-        <h3>Help Heal the Stratford 10</h3>
-        <p>Eight puppies and two parents rescued in a cruelty case need emergency vet care, vaccines and spay/neuter surgeries.</p>
-        <span class="ecard-tag">Donate Now</span>
-      </div>
-    </a>
-    <a href="holiday-evergreen.jpg" class="ecard" target="_blank">
-      <img src="holiday-evergreen.jpg" alt="STARS Holiday Evergreen Sale &amp; Boutique flyer, November 27–29" style="object-position:top;">
-      <div class="ecard-body">
-        <div class="ecard-date">Nov 27–29, 2026</div>
-        <h3>Holiday Evergreen Sale &amp; Boutique</h3>
-        <p>Wreaths, cemetery pieces, kissing balls, pine roping &amp; more at Stratford Animal Care &amp; Control, 225 Beacon Point Rd.</p>
-        <span class="ecard-tag">View Flyer</span>
-      </div>
-    </a>
-    <a href="/events.html" class="ecard">
-      <img src="photos-with-santa-card.jpg" alt="Santa holding a smiling dog and a cat – Photos with Santa, Sunday November 29, 2026">
-      <div class="ecard-body">
-        <div class="ecard-date">Sun, Nov 29, 2026</div>
-        <h3>Photos with Santa</h3>
-        <p>Pet photos with Santa, 10 AM–12 PM &amp; 2–4 PM, for a $20 donation. Take photos on your own phone — all proceeds benefit shelter animals.</p>
-        <span class="ecard-tag">See Details</span>
-      </div>
-    </a>
 
-  </div>
-</section>
 
 <section class="vol" id="volunteer">
   <div class="vol-inner">
