@@ -187,19 +187,27 @@
       </div>
       <div class="step-card">
         <div class="step-num">2</div>
-        <h3>Visit the Shelter</h3>
-        <p>Come meet your potential new companion in person at Stratford Animal Control.</p>
+        <h3>Apply in Advance</h3>
+        <p>Submit your application through the official <a href="https://www.townofstratford.com/o/stratford/page/animal-adoption" target="_blank" style="color:var(--red);font-weight:600;">Town of Stratford adoption page</a> — not through Adopt-a-Pet. Applications are reviewed by Animal Control, and applying ahead gets you priority.</p>
       </div>
       <div class="step-card">
         <div class="step-num">3</div>
-        <h3>Submit an Application</h3>
-        <p>Apply through the official <a href="https://www.townofstratford.com/o/stratford/page/animal-adoption" target="_blank" style="color:var(--red);font-weight:600;">Town of Stratford adoption page</a> — not through Adopt-a-Pet Applications are reviewed by Animal Control.</p>
+        <h3>Meet Your Match</h3>
+        <p>Book a <a href="https://form.jotform.com/250218091844051" target="_blank" style="color:var(--red);font-weight:600;">Sunday Dog Meet &amp; Greet</a> (1–4pm) or come to our Thursday Cat Open House (4–7pm). Our small team is often out on calls, so planning ahead guarantees someone is there to welcome you.</p>
       </div>
       <div class="step-card">
         <div class="step-num">4</div>
         <h3>Welcome Home</h3>
         <p>Once approved, take your new best friend home and change both your lives forever.</p>
       </div>
+    </div>
+    <div style="margin-top:32px;background:#fff;border:1px solid rgba(0,0,0,0.08);border-radius:4px;padding:24px 28px;display:flex;flex-wrap:wrap;gap:20px 48px;align-items:flex-start;">
+      <div><div style="font-size:10.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Shelter Hours</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;">Mon–Fri · 9:00 AM–5:00 PM</div>
+        <div style="font-size:14px;color:#666;line-height:1.7;">Closed for lunch 12:30–1:00 PM. Evening, weekend and holiday visits by appointment.</div></div>
+      <div><div style="font-size:10.5px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--red);margin-bottom:6px;">Need Animal Control?</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:700;font-size:20px;">Police Dispatch</div>
+        <div style="font-size:14px;color:#666;line-height:1.7;">Non-emergency: <a href="tel:2033854100" style="color:var(--black);font-weight:600;">203-385-4100</a> · Emergency: <a href="tel:911" style="color:var(--black);font-weight:600;">911</a></div></div>
     </div>
   </div>
 </div>
@@ -254,5 +262,24 @@
   </div>
 </footer>
 
+<!-- MOBILE MENU -->
+<style>
+.mm-btn{display:none;background:none;border:0;font-size:26px;line-height:1;padding:4px 2px 4px 8px;cursor:pointer;color:#1a1a1a}
+@media (max-width:768px){
+ .mm-btn{display:block}
+ nav.mm-open .nav-links{display:flex!important;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#fafaf8;padding:4px 20px 12px;gap:0;margin:0;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+ nav.mm-open .nav-links li{width:100%;list-style:none}
+ nav.mm-open .nav-links a{display:block;padding:14px 0;font-size:16px;opacity:1;border-bottom:1px solid rgba(0,0,0,.06)}
+ nav.mm-open .nav-links li:last-child a{border-bottom:0}
+}
+</style>
+<script>
+(function(){var n=document.querySelector('nav');if(!n)return;var l=n.querySelector('.nav-links'),c=n.querySelector('.nav-ctas')||n;if(!l)return;
+var b=document.createElement('button');b.type='button';b.className='mm-btn';b.setAttribute('aria-label','Open menu');b.setAttribute('aria-expanded','false');b.innerHTML='&#9776;';c.appendChild(b);
+function set(o){n.classList.toggle('mm-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');b.innerHTML=o?'&times;':'&#9776;';}
+b.addEventListener('click',function(){set(!n.classList.contains('mm-open'));});
+l.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});})();
+</script>
+<!-- /MOBILE MENU -->
 </body>
 </html>

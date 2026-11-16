@@ -334,6 +334,15 @@
     <a href="/events.html" class="sec-link">View All →</a>
   </div>
   <div class="events-grid">
+    <a href="https://givebutter.com/thestratford10" class="ecard" target="_blank">
+      <img src="stratford-10.jpg" alt="Four of the Stratford 10 dogs: Big Papa, Baby Boo, Sassy and Boss Man">
+      <div class="ecard-body">
+        <div class="ecard-date">Urgent Need</div>
+        <h3>Help Heal the Stratford 10</h3>
+        <p>Eight puppies and two parents rescued in a cruelty case need emergency vet care, vaccines and spay/neuter surgeries.</p>
+        <span class="ecard-tag">Donate Now</span>
+      </div>
+    </a>
     <a href="holiday-evergreen.jpg" class="ecard" target="_blank">
       <img src="holiday-evergreen.jpg" alt="STARS Holiday Evergreen Sale &amp; Boutique flyer, November 27–29" style="object-position:top;">
       <div class="ecard-body">
@@ -353,15 +362,7 @@
         <a href="https://www.townofstratford.com/o/stratford/page/animal-adoption" target="_blank" class="ecard-tag" style="text-decoration:none;">Adopt Chucky</a>
       </div>
     </div>
-    <a href="https://givebutter.com/the-purrfect-fix-fund" class="ecard" target="_blank">
-      <img src="purrfect.png" alt="The Purrfect Fix Fund - Trap Neuter Return">
-      <div class="ecard-body">
-        <div class="ecard-date">Ongoing</div>
-        <h3>The Purrfect Fix Fund</h3>
-        <p>Help us Trap, Neuter and Return community cats in Stratford with donations that fund spay/neuter surgeries.</p>
-        <span class="ecard-tag">Donate Now</span>
-      </div>
-    </a>
+
   </div>
 </section>
 
@@ -473,5 +474,24 @@
   </div>
 </footer>
 
+<!-- MOBILE MENU -->
+<style>
+.mm-btn{display:none;background:none;border:0;font-size:26px;line-height:1;padding:4px 2px 4px 8px;cursor:pointer;color:#1a1a1a}
+@media (max-width:768px){
+ .mm-btn{display:block}
+ nav.mm-open .nav-links{display:flex!important;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#fafaf8;padding:4px 20px 12px;gap:0;margin:0;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+ nav.mm-open .nav-links li{width:100%;list-style:none}
+ nav.mm-open .nav-links a{display:block;padding:14px 0;font-size:16px;opacity:1;border-bottom:1px solid rgba(0,0,0,.06)}
+ nav.mm-open .nav-links li:last-child a{border-bottom:0}
+}
+</style>
+<script>
+(function(){var n=document.querySelector('nav');if(!n)return;var l=n.querySelector('.nav-links'),c=n.querySelector('.nav-ctas')||n;if(!l)return;
+var b=document.createElement('button');b.type='button';b.className='mm-btn';b.setAttribute('aria-label','Open menu');b.setAttribute('aria-expanded','false');b.innerHTML='&#9776;';c.appendChild(b);
+function set(o){n.classList.toggle('mm-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');b.innerHTML=o?'&times;':'&#9776;';}
+b.addEventListener('click',function(){set(!n.classList.contains('mm-open'));});
+l.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});})();
+</script>
+<!-- /MOBILE MENU -->
 </body>
 </html>

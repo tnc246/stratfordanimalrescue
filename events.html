@@ -113,6 +113,16 @@
 <div class="events-grid">
   
     <div class="ecard">
+      <img src="stratford-10.jpg" alt="Four of the Stratford 10 dogs: Big Papa, Baby Boo, Sassy and Boss Man">
+      <div class="ecard-body">
+        <div class="ecard-date">Urgent Need</div>
+        <h3>Help Heal the Stratford 10</h3>
+        <p>Eight puppies and two parents were seized from a makeshift backyard kennel in a cruelty case. Your gift covers their emergency vet care, vaccines, spay/neuter surgeries and treatment.</p>
+        <a href="https://givebutter.com/thestratford10" class="ecard-tag" target="_blank">Donate Now</a>
+      </div>
+    </div>
+
+    <div class="ecard">
       <img src="holiday-evergreen.jpg" alt="STARS Holiday Evergreen Sale &amp; Boutique flyer, November 27–29" style="object-position:top;">
       <div class="ecard-body">
         <div class="ecard-date">Nov 27–29, 2026 | Fri 12–4 PM · Sat &amp; Sun 10 AM–4 PM</div>
@@ -130,6 +140,29 @@
         <p>Our goal is one million likes &amp; shares for Chucky! He's handsome, loyal and full of personality, needs to be the only pet, and is ready for a family who will give him the attention he deserves. Help Chucky go viral and find his forever home!</p>
         <a href="https://www.facebook.com/share/p/1A6vJ66D4u/" class="ecard-tag" target="_blank" style="background:#1877F2;color:white;margin:0 6px 8px 0;">Like &amp; Share</a>
         <a href="https://www.townofstratford.com/o/stratford/page/animal-adoption" class="ecard-tag" target="_blank">Adopt Chucky</a>
+      </div>
+    </div>
+
+<div class="ecard">
+      <img src="newsletter/winter-kitty-cat-open-house.jpg" alt="Cat Adoption Open House &amp; Boutique, Thursdays 4–7 PM" style="object-position:top;">
+      <div class="ecard-body">
+        <div class="ecard-date">Every Thursday 4–7pm</div>
+        <h3>Cat Adoption Open House &amp; Boutique</h3>
+        <p>Meet adoptable cats and kittens at Stratford Animal Care &amp; Control, 225 Beacon Point Road. Fill out an application in advance for priority — adult cat adoption fees are waived and kittens are BOGO.</p>
+        <a href="https://www.townofstratford.com/o/stratford/page/animal-adoption" class="ecard-tag" target="_blank">Apply in Advance</a>
+      </div>
+    </div>
+
+    <div class="ecard">
+      <div style="aspect-ratio:4/3;background:var(--red);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;">
+        <div style="font-size:44px;line-height:1;margin-bottom:10px;">📚</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:32px;color:#fff;line-height:1.1;">Paws to <em style="color:var(--yellow);">Read</em></div>
+      </div>
+      <div class="ecard-body">
+        <div class="ecard-date">Last Saturday Monthly 12:30–1:30pm · 3rd Wednesdays 6–7pm</div>
+        <h3>Paws to Read &amp; More</h3>
+        <p>Kids and adults read, knit, color or simply sit quietly beside shelter animals. It builds young readers' confidence and comforts animals waiting for homes.</p>
+        <a href="https://form.jotform.com/260396342930054" class="ecard-tag" target="_blank">Register</a>
       </div>
     </div>
 
@@ -222,5 +255,24 @@
   </div>
 </footer>
 
+<!-- MOBILE MENU -->
+<style>
+.mm-btn{display:none;background:none;border:0;font-size:26px;line-height:1;padding:4px 2px 4px 8px;cursor:pointer;color:#1a1a1a}
+@media (max-width:768px){
+ .mm-btn{display:block}
+ nav.mm-open .nav-links{display:flex!important;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#fafaf8;padding:4px 20px 12px;gap:0;margin:0;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+ nav.mm-open .nav-links li{width:100%;list-style:none}
+ nav.mm-open .nav-links a{display:block;padding:14px 0;font-size:16px;opacity:1;border-bottom:1px solid rgba(0,0,0,.06)}
+ nav.mm-open .nav-links li:last-child a{border-bottom:0}
+}
+</style>
+<script>
+(function(){var n=document.querySelector('nav');if(!n)return;var l=n.querySelector('.nav-links'),c=n.querySelector('.nav-ctas')||n;if(!l)return;
+var b=document.createElement('button');b.type='button';b.className='mm-btn';b.setAttribute('aria-label','Open menu');b.setAttribute('aria-expanded','false');b.innerHTML='&#9776;';c.appendChild(b);
+function set(o){n.classList.toggle('mm-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');b.innerHTML=o?'&times;':'&#9776;';}
+b.addEventListener('click',function(){set(!n.classList.contains('mm-open'));});
+l.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});})();
+</script>
+<!-- /MOBILE MENU -->
 </body>
 </html>

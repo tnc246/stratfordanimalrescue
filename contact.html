@@ -341,5 +341,24 @@
   </div>
 </footer>
 
+<!-- MOBILE MENU -->
+<style>
+.mm-btn{display:none;background:none;border:0;font-size:26px;line-height:1;padding:4px 2px 4px 8px;cursor:pointer;color:#1a1a1a}
+@media (max-width:768px){
+ .mm-btn{display:block}
+ nav.mm-open .nav-links{display:flex!important;flex-direction:column;align-items:stretch;position:absolute;top:100%;left:0;right:0;background:#fafaf8;padding:4px 20px 12px;gap:0;margin:0;border-bottom:1px solid rgba(0,0,0,.08);box-shadow:0 10px 24px rgba(0,0,0,.08)}
+ nav.mm-open .nav-links li{width:100%;list-style:none}
+ nav.mm-open .nav-links a{display:block;padding:14px 0;font-size:16px;opacity:1;border-bottom:1px solid rgba(0,0,0,.06)}
+ nav.mm-open .nav-links li:last-child a{border-bottom:0}
+}
+</style>
+<script>
+(function(){var n=document.querySelector('nav');if(!n)return;var l=n.querySelector('.nav-links'),c=n.querySelector('.nav-ctas')||n;if(!l)return;
+var b=document.createElement('button');b.type='button';b.className='mm-btn';b.setAttribute('aria-label','Open menu');b.setAttribute('aria-expanded','false');b.innerHTML='&#9776;';c.appendChild(b);
+function set(o){n.classList.toggle('mm-open',o);b.setAttribute('aria-expanded',o);b.setAttribute('aria-label',o?'Close menu':'Open menu');b.innerHTML=o?'&times;':'&#9776;';}
+b.addEventListener('click',function(){set(!n.classList.contains('mm-open'));});
+l.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});})();
+</script>
+<!-- /MOBILE MENU -->
 </body>
 </html>
