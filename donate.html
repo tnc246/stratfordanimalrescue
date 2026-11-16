@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Donate – STARS Stratford Animal Rescue Society</title>
+<title>Donate &amp; Fundraisers – STARS Stratford Animal Rescue Society</title>
 <script src="https://givebutter.com/js/widget.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -41,6 +41,16 @@
     footer { padding: 40px 24px 24px; } .footer-top { grid-template-columns: 1fr 1fr; gap: 32px; }
     .footer-bottom { flex-direction: column; text-align: center; }
   }
+  .fund-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:80px; }
+  .fund-grid .ecard { background:white; border:1px solid rgba(0,0,0,0.08); border-radius:4px; overflow:hidden; display:flex; flex-direction:column; transition:transform .3s, box-shadow .3s; }
+  .fund-grid .ecard:hover { transform:translateY(-5px); box-shadow:0 20px 50px rgba(0,0,0,0.1); }
+  .fund-grid .ecard img { width:100%; aspect-ratio:4/3; object-fit:cover; display:block; }
+  .fund-grid .ecard-body { padding:28px; text-align:left; }
+  .fund-grid .ecard-date { font-size:10.5px; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--red); margin-bottom:8px; }
+  .fund-grid .ecard-body h3 { font-family:"Playfair Display",serif; font-size:22px; font-weight:700; margin-bottom:10px; line-height:1.2; }
+  .fund-grid .ecard-body p { font-size:14px; color:#666; line-height:1.7; margin-bottom:20px; }
+  .fund-grid .ecard-tag { display:inline-block; background:var(--yellow); color:var(--black); padding:8px 20px; border-radius:100px; font-size:12px; font-weight:700; letter-spacing:0.07em; text-transform:uppercase; text-decoration:none; }
+  @media (max-width:900px){ .fund-grid { grid-template-columns:1fr; } .ways-grid { grid-template-columns:1fr !important; } }
 </style>
 </head>
 <body>
@@ -49,6 +59,7 @@
   <ul class="nav-links">
     <li><a href="/#about">About</a></li>
     <li><a href="/events.html">Events</a></li>
+    <li><a href="/donate.html#fundraisers">Fundraisers</a></li>
     <li><a href="/volunteer.html">Get Involved</a></li>
     <li><a href="/contact.html">Contact</a></li>
   </ul>
@@ -58,17 +69,49 @@
   </div>
 </nav>
 <div class="page-hero">
-  <div class="tag">Donate</div>
+  <div class="tag">Donate &amp; Fundraisers</div>
   <h1>Support Our <em>Mission</em></h1>
-  <p>Every dollar you give goes directly to animals in need at Stratford Animal Control. There are many ways to help.</p>
+  <p>Every dollar you give goes directly to animals in need at Stratford Animal Control. Give to one of our active fundraisers or choose another way to help below.</p>
 </div>
 
-<div class="content">
-  <div class="section-tag">Support Our Mission</div>
+<div class="content" id="fundraisers" style="scroll-margin-top:90px;">
+  <div class="section-tag">Active Fundraisers</div>
+  <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);font-weight:900;letter-spacing:-0.02em;margin-bottom:12px;">Where Your Gift Is Needed <em style="color:var(--red);">Now</em></h2>
+  <p style="font-size:16px;color:#666;max-width:600px;margin-bottom:40px;line-height:1.7;">Every fundraiser below goes straight to the animals at Stratford Animal Care &amp; Control.</p>
+  <div class="fund-grid">
+    <div class="ecard">
+      <img src="stratford-10.jpg" alt="Four of the Stratford 10 dogs: Big Papa, Baby Boo, Sassy and Boss Man">
+      <div class="ecard-body">
+        <div class="ecard-date">Urgent Need</div>
+        <h3>Help Heal the Stratford 10</h3>
+        <p>Eight puppies and two parents were seized from a makeshift backyard kennel in a cruelty case. Your gift covers their emergency vet care, vaccines, spay/neuter surgeries and treatment.</p>
+        <a href="https://givebutter.com/thestratford10" class="ecard-tag" target="_blank">Donate Now</a>
+      </div>
+    </div>
+<div class="ecard">
+  <img src="purrfect.png" alt="The Purrfect Fix Fund - Trap Neuter Return" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;">
+  <div class="ecard-body">
+    <div class="ecard-date">Ongoing</div>
+    <h3>The Purrfect Fix Fund</h3>
+    <p>Help us Trap, Neuter and Return community cats in Stratford. Your donation funds spay/neuter surgeries to stop the cycle and help community cats live healthier lives.</p>
+    <a href="https://givebutter.com/the-purrfect-fix-fund" class="ecard-tag" target="_blank">Donate Now</a>
+  </div>
+</div>
+  <div class="ecard">
+    <img src="Sponsor.webp" alt="Sponsor a Cage" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;">
+    <div class="ecard-body">
+      <div class="ecard-date">Ongoing</div>
+      <h3>Sponsor a Cage</h3>
+      <p>Help provide a safe, warm, and comfortable space for our animals while they wait for their forever homes.</p>
+      <a href="https://givebutter.com/donate-stars" class="ecard-tag">Donate Now</a>
+    </div>
+  </div>
+  </div>
+  <div class="section-tag">More Ways to Give</div>
   <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);font-weight:900;letter-spacing:-0.02em;margin-bottom:12px;">Every Gift Saves Lives</h2>
   <p style="font-size:16px;color:#666;max-width:600px;margin-bottom:60px;line-height:1.7;">STARS is entirely funded by donations, fundraising, and grants. Every dollar goes directly to the animals in our care.</p>
 
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px;">
+  <div class="ways-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-bottom:60px;">
 
     <div style="background:white;border:1.5px solid rgba(0,0,0,0.08);border-radius:4px;padding:32px;text-align:center;">
       <div style="font-size:36px;margin-bottom:12px;">💛</div>
@@ -134,7 +177,7 @@
       <h4>Get Involved</h4>
       <ul>
         <li><a href="/volunteer.html">Volunteer</a></li>
-        <li><a href="/donate.html">Donate</a></li>
+        <li><a href="/donate.html">Donate &amp; Fundraisers</a></li>
         <li><a href="/events.html">All Events</a></li>
         <li><a href="/contact.html">Contact Us</a></li>
       </ul>
