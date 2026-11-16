@@ -68,6 +68,19 @@
   .gb-bar span { display: block; height: 100%; background: var(--red); border-radius: 100px; }
   .gb-amt { font-size: 13px; color: #666; }
   .gb-amt strong { color: var(--black); }
+  .impact { margin: 0 0 80px; }
+  .impact-h { font-family: "Playfair Display", serif; font-size: clamp(28px,3vw,42px); font-weight: 900; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .impact-h em { color: var(--red); }
+  .impact-intro { font-size: 16px; color: #666; max-width: 640px; line-height: 1.7; margin-bottom: 36px; }
+  .impact-intro strong { color: var(--black); }
+  .impact-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .impact-card { display: flex; flex-direction: column; gap: 10px; background: white; border: 1px solid rgba(0,0,0,0.08); border-radius: 4px; padding: 28px; text-decoration: none; color: var(--black); transition: transform .25s, box-shadow .25s, border-color .25s; }
+  .impact-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,0.08); border-color: var(--red); }
+  .impact-amt { font-family: "Playfair Display", serif; font-size: 44px; font-weight: 900; color: var(--red); line-height: 1; }
+  .impact-txt { font-size: 15px; color: #555; line-height: 1.6; flex: 1; }
+  .impact-cta { font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--black); }
+  @media (max-width: 900px) { .impact-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 560px) { .impact-grid { grid-template-columns: 1fr; } .impact-amt { font-size: 36px; } }
 </style>
 </head>
 <body>
@@ -136,6 +149,45 @@
   </div>
 </div>
   </div>
+
+  <div class="impact" id="impact">
+    <div class="section-tag">What Your Gift Does</div>
+    <h2 class="impact-h">Every Dollar Goes to <em>Real Care</em></h2>
+    <p class="impact-intro">These amounts come straight from our recent vet bills. In October, one visit for just five shelter animals cost <strong>$2,253</strong>.</p>
+    <div class="impact-grid">
+      <a class="impact-card" href="https://givebutter.com/donate-stars?amount=25" target="_blank">
+        <div class="impact-amt">$25</div>
+        <div class="impact-txt">A rabies vaccine for one dog or cat</div>
+        <span class="impact-cta">Give $25 &rarr;</span>
+      </a>
+      <a class="impact-card" href="https://givebutter.com/donate-stars?amount=50" target="_blank">
+        <div class="impact-amt">$50</div>
+        <div class="impact-txt">Core vaccines for a dog: rabies plus distemper and parvo</div>
+        <span class="impact-cta">Give $50 &rarr;</span>
+      </a>
+      <a class="impact-card" href="https://givebutter.com/donate-stars?amount=130" target="_blank">
+        <div class="impact-amt">$130</div>
+        <div class="impact-txt">Spays a female cat</div>
+        <span class="impact-cta">Give $130 &rarr;</span>
+      </a>
+      <a class="impact-card" href="https://givebutter.com/donate-stars?amount=235" target="_blank">
+        <div class="impact-amt">$235</div>
+        <div class="impact-txt">Full bloodwork to check a new arrival’s health</div>
+        <span class="impact-cta">Give $235 &rarr;</span>
+      </a>
+      <a class="impact-card" href="https://givebutter.com/donate-stars?amount=350" target="_blank">
+        <div class="impact-amt">$350</div>
+        <div class="impact-txt">Neuters a medium-size dog</div>
+        <span class="impact-cta">Give $350 &rarr;</span>
+      </a>
+      <a class="impact-card" href="https://givebutter.com/donate-stars?amount=500" target="_blank">
+        <div class="impact-amt">$500</div>
+        <div class="impact-txt">A new dog’s complete checkup: vaccines, heartworm and parasite tests, bloodwork and sedation</div>
+        <span class="impact-cta">Give $500 &rarr;</span>
+      </a>
+    </div>
+  </div>
+
   <div class="section-tag">More Ways to Give</div>
   <h2 style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,42px);font-weight:900;letter-spacing:-0.02em;margin-bottom:12px;">Every Gift Saves Lives</h2>
   <p style="font-size:16px;color:#666;max-width:600px;margin-bottom:60px;line-height:1.7;">STARS is entirely funded by donations, fundraising, and grants. Every dollar goes directly to the animals in our care.</p>
